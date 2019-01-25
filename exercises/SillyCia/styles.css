@@ -1,0 +1,26 @@
+#myHeader {
+    color: darkgreen;
+}
+.headline {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: center;
+}
+
+p {
+    line-height: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+#myLink {
+   text-transform: uppercase;
+}
+
+img {
+    float: left;
+}
+
