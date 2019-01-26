@@ -1,0 +1,64 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    column-count: 3;
+}
+
+header {
+    font-size: 45px;
+    text-align: center;
+    display: block;
+    border-bottom: 10px solid;  
+    column-span: all;
+
+}
+
+li {
+    display: inline;
+    text-align: ;
+    line-height: 25px;
+    padding: 50px;
+    font-size: 30px;
+}
+nav {
+    border-bottom: dashed;
+    column-span: all;
+}
+
+article > h1 {
+    text-align: center;
+    font-style: italic;
+}
+
+article > p {
+    text-indent: 20px;
+}
+
+article {
+    border: solid .5px;
+    padding: 15px;
+}
+
+aside > h2 {
+    border: dotted black;
+    text-align: center;
+    color: red;
+}
+
+aside {
+    border: solid black;
+}
+
+span {
+    border: solid black;
+    padding: 5px;
+    display: block;
+    text-align: center;
+
+}
+
+footer {
+    border: solid black;
+    font-style: italic;
+    column-span:all;
+
+}

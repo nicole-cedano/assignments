@@ -1,0 +1,21 @@
+.myHeader {
+    color: purple;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+#first {
+    background-color: rgb(226, 148, 161);
+    border-style: groove;
+}
+
+#second {
+    background-color: rgba(92, 92, 236, 0.459);
+    border-style: dashed;
+}
+
+#third {
+    background-color: greenyellow;
+    border-style: solid;
+}
+
