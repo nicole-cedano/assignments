@@ -7,7 +7,17 @@
 // }
 
 // Write an if statement that prints "is the length" if the length of "cat" is 3
-if()
+// var cat = "cat"
+// if(cat.length == 3) {
+//  console.log("is the length ")
+// } else {
+//     console.log("not the length")
+// }
 
+// // Write an if/else statement that checks if "cat" is equal to "dog" and prints, "not the same" when they are not equal.
+// if( "cat" == "dog"){
+//     console.log("species do not exist")
+// } else {
+//     console.log("not the same")
+// }
 
-// Write an if/else statement that checks if "cat" is equal to "dog" and prints, "not the same" when they are not equal.

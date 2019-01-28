@@ -9,6 +9,7 @@ header {
     display: block;
     border-bottom: 10px solid;  
     column-span: all;
+    background-color: lightgray;
 
 }
 
@@ -44,6 +45,9 @@ aside > h2 {
     color: red;
 }
 
+p {
+    font-weight: bold;
+}
 aside {
     border: solid black;
 }
@@ -61,4 +65,10 @@ footer {
     font-style: italic;
     column-span:all;
 
+}
+img {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
