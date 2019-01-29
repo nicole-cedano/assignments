@@ -1,0 +1,38 @@
+* {
+    box-sizing: "border-box";
+    margin: 0px;
+}
+
+body {
+    border-style: solid white 50px;
+    margin: auto 
+
+    
+}
+
+div{
+    background-color: #F5C6D6;
+    width:  500px;
+    height:  100px;
+    padding: 5px;
+    margin: auto;
+    display :block;
+    border-style: solid white 50px
+
+}
+p{
+    box-sizing: "border-box";
+    display: inline-block;
+    width: 150px;
+    height: 100px ;
+    background-color: #EE2E84;
+    padding: 5px;
+    border-style: solid white 50 px
+
+}
+
+
+
+
+
+
