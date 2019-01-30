@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    text-align: center;
+}
+header {
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    background-color:lavenderblush;
+    border: dashed hotpink 2px;
+    color: violet;
+    position: relative;
+    padding-top: 3px;
+    width: 25%;
+    float: left;
+    top: 0;
+    display: block;
+    margin: 40px;
+}
+
+nav {
+    background-color: lavenderblush;
+    overflow: hidden;
+    height: 35px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border: solid white 1px;
+    z-index: 10;
+
+}
+li {
+    color: violet;
+    font-size: 20px;
+    display: inline;
+    width: 20%;
+    float: left;
+    line-height: 0px;
+    font-weight: bold;
+
+
+}
+
+nav li:hover{
+    cursor: pointer;
+
+    
+}
+div{
+    position: relative;
+    top: 130px;
+    border: solid lightcoral;
+    width: 100%;
+
+
+
+}
+img {
+    height: 200px;
+    width: 200px;
+    padding: 25px;
+    left: 20px;
+    object-fit: contain;
+
+}
+p{
+    display: block;
+
+}
+
+
+ /* text-align: center;
+    vertical-align: middle;
+    display: inline; */
+
+/* #porQue {
+    position: relative;
+    left: -190px;
+}
+#ugh {
+    position: relative;
+    left: -190px;
+}  */
+
+ #whyRULikeThis {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}

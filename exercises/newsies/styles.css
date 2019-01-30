@@ -1,6 +1,11 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
 body {
     font-family: 'Times New Roman', Times, serif;
     column-count: 3;
+    margin: 10px
 }
 
 header {
@@ -10,12 +15,13 @@ header {
     border-bottom: 10px solid;  
     column-span: all;
     background-color: lightgray;
+    margin: 10px;
 
 }
 
 li {
     display: inline;
-    text-align: ;
+    text-align: center;
     line-height: 25px;
     padding: 50px;
     font-size: 30px;
@@ -23,6 +29,7 @@ li {
 nav {
     border-bottom: dashed;
     column-span: all;
+
 }
 
 article > h1 {
@@ -37,6 +44,7 @@ article > p {
 article {
     border: solid .5px;
     padding: 15px;
+    width: 33 %
 }
 
 aside > h2 {
@@ -47,6 +55,7 @@ aside > h2 {
 
 p {
     font-weight: bold;
+    padding: 10px
 }
 aside {
     border: solid black;
