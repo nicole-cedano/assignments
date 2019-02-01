@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+
+}
+img {
+    height: 100px;
+    width: 100px;
+
+}
+
+li {
+    list-style-type: none;
+}

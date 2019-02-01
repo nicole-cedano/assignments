@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NicosTravelForm</title>
+    <link href = "styles.css" rel ="stylesheet">
+</head>
+<body>
+    <h1>Travel Form</h1>
+    <form name="travelForm">
+       <h3>General Info</h3>
+        First Name: <input type = 'text' name = "name" required placeholder="Enter First Name">
+        Last Name:<input type = 'text' name = 'name' required placeholder="Enter Last Name">
+        Age:<input type = 'number' name = 'age' required placeholder="Enter Age">
+       
+       
+        <h3>Please Select Your Gender</h3>
+        Female:<input type='radio'  value='Female' name='gender'>
+        Male:<input type='radio'  value='Male' name='gender'>
+        N/A:<input type='radio'  value='Prefer not to state' name='gender'>
+       
+       
+        <h3>Please Select The City You Are Flying To</h3>
+        <select name='location' >
+            <option value='Los Angeles'>Los Angeles</option> 
+            <option value='New York'>New York</option>
+            <option value='Chicago' >Chicago</option>
+        </select>
+        
+        <h3>Do You Have Any Dietary Restrictions?</h3>
+        Vegan:<input type='checkbox' value='Vegan' name='diet'>
+        Vegetarian:<input type='checkbox' value='Vegetarian' name='diet'>
+        Nut-Free:<input type='checkbox' value='Nut-Free' name='diet'>
+        None:<input type='checkbox' value='None' name='diet'>
+
+        <h4>All Done?</h4>
+        <button>Submit</button>
+
+    </form>
+
+
+
+<script src ="app.js"></script>    
+</body>
+</html>
