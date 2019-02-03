@@ -27,3 +27,4 @@ travelForm.addEventListener('submit', function (e) {
          Location: ${chosenCity}
          Dietary Restrictions: ${result}`)
 })
+
