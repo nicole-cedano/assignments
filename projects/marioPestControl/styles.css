@@ -1,6 +1,7 @@
 *{
     margin: 0;
     box-sizing: border-box;
+    font-family: "Lucida Console", monaco, monospace;
 
 }
 img {
@@ -11,4 +12,38 @@ img {
 
 li {
     list-style-type: none;
+}
+header{
+    text-align: center;
+    color: red;
+    border: ridge white 2pt;
+    background-color: lightgreen;
+
+}
+h4 {
+    color: pink;
+
+}
+
+.marioForm {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+div{
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    width: 75%
+
+}
+#conatiner {
+    display:flex;
+    justify-items: center;
+
 }
