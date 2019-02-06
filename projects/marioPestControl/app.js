@@ -7,6 +7,6 @@ marioForm.addEventListener("submit", function(e){
 
     var result = ((goomba * 5 ) + (bobomb * 7 ) + (cheep * 11))
     var resultContainer = document.getElementById('container')
-resultContainer.innerHTML = result
+    resultContainer.innerHTML = 'Princess Peach Owes: ' + result + ' coins'
     
 })

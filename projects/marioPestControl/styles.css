@@ -7,11 +7,15 @@
 img {
     height: 100px;
     width: 100px;
+    display: flex;
+    flex-direction: row;
 
 }
 
 li {
     list-style-type: none;
+    text-align: center;
+
 }
 header{
     text-align: center;
@@ -21,29 +25,53 @@ header{
 
 }
 h4 {
-    color: pink;
+    color: black;
 
 }
 
-.marioForm {
+form {
     display: flex;
-    justify-items: center;
     justify-content: center;
     text-align: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+
 
 }
 
 div{
     display: flex;
-    justify-items: center;
+    justify-content: center;
     flex-direction: column;
-    width: 75%
-
+    width: 75%;
 }
-#conatiner {
+button {
+    display: flex;
+    height: 50pt;
+    width: 50pt;
+    flex-wrap: wrap;
+}
+#container {
     display:flex;
     justify-items: center;
+    height: 150px;
+    width: 150 px;
+}
 
+footer {
+    background-color: lightgoldenrodyellow;
+    margin: 2pt;
+    position: fixed;
+    bottom:0 ;
+    width: 100%; 
+
+
+}
+p {
+    display: flex;
+    flex-direction: row;
+    width: 33%;
+
+}
+input {
+    width: 33%;
+    height: 50pt;
 }
