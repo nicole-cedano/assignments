@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    margin: 0 ;
+}
+
+div {
+    height: 200pt;
+    width: 200pt;
+    border: solid black 2pt;
+    text-align: center;
+    display:inline-block
+}
+body {
+    display: flex;
+    width: 100%;
+    
+}
+div:hover {
+    background-color: blue;
+}
+div:active{
+    background-color: red;
+}
+div:visited {
+    background-color: yellow;
+
+}
+
