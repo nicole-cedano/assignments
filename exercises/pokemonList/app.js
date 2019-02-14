@@ -17,10 +17,12 @@ xhr.send()
 function listDataToDom(pokemonArr){
     for(var i = 0; pokemonArr.length; i++)
     var pokemon = console.log(pokemonArr[i])
+
+    var name = pokemonArr[i].name
+    console.log(name)
     
 
-    }
-   
 
 
+}
 

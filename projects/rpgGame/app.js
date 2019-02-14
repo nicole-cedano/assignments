@@ -27,12 +27,12 @@ var options = ["You must walk, press W "];
         var enemies = [
             {
                 enemyName: "Dr. Doofenshmirtz",
-                enemyHealth: 400,
+                enemyHealth: 600,
                 enemyLocation: "Coming from the sky"
             },
             {
                 enemyName: 'The Joker',
-                enemyHealth: 300,
+                enemyHealth: 400,
                 enemyLocation: "Smiling in front of your face,"
             },
             {
@@ -69,7 +69,7 @@ var options = ["You must walk, press W "];
 //4. Choose to be brave or run like a scaredy pants
 
 function runAndAttack(health) {
-    while (health > 60) {
+    while (health > 80) {
         
         var runAttack = ["run", "attack"]
         var defense = ask.keyInSelect(runAttack, "Choose how to resist,")
@@ -112,23 +112,22 @@ function enemyAttack() {
         
         player.health += 33
         player.inventory.push(currentEnemy.enemyName)
-        console.log("Woot, woot ;) you have" + currentEnemy.enemyName + " in your inventory. Health: " + player.health);
+        console.log("Woot, woot ;) you now have " + currentEnemy.enemyName + " in your inventory. UR Health: " + player.health);
         return walkAgain();
     }}
 // ending 
     function walkAgain() {
-        if(player.health < 60){
+        if(player.health < 80){
             return "Sudden Death. Game Over."
             
-        } else if( player.health > 160){
-            return "YOU KILLED them. One last WOOT WOOT, cheers, and now this has turned into a fun drinking game, take a shot!!!"
+        } else if( player.health > 200){
+            return "YOU KILLED them. One last WOOT WOOT, cheers, and now this has turned into a fun drinking game, go take a shot!!!"
         }
         else {
         var options2 = ["Enter 'w' if you would like stroll again, or 'print' if you would like to know you stats."]
         var choice = ask.keyIn(options2, {limit:"wp"})
         if (choice == "w") {
             console.log("ANOTHER STROLL teehee")
-            //console.log(player.health);
             return random()
         } else if(choice == "p") {
             console.log(player)
@@ -140,5 +139,3 @@ function enemyAttack() {
         }
 }}
 
-
-console.log(Person.name)

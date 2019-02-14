@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Axios ToDo List</title>
+</head>
+<body>
+    <header>
+        <h1>Todo List</h1>
+    </header>
+    <div id= 'todo-container'>
+    
+    </div>
+    <form name = 'putForm'>
+            <h2>New Todo?</h2>
+            Todo Title: <input type="text" name="title" required placeholder = "Title">
+
+            Description: <input type="text" name="description" placeholder = "Description">
+            Price: <input type= "number" name= "price" placeholder="Item Price">
+            Image: <input type= "text" name="image" placeholder="Paste Image Url">
+            <h3>Completed?</h3>
+            Yes: <input type="radio" value='true' name = "Y">
+            No: <input type="radio" value='false' name = "N">   
+            <button>Submit</button>
+     </form>
+ 
+
+    
+
+
+
+
+    <script src= 'https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js'></script>
+    <script src='app.js'></script>
+</body>
+</html>
