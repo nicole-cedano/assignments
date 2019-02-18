@@ -78,8 +78,13 @@ form {
 
 @media(min-width: 700px){
     .todo-container{
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
+    }
+    #to-do-list-container{
+        display: flex;
+        flex-direction: row;
+        
     }
     button{
         height: 50pt;

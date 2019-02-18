@@ -14,7 +14,6 @@ function listTodos(todosArr) {
     todoListContainer.innerHTML = ``
     for (let i = 0; i < todosArr.length; i++) {
         //Create
-        console.log("hey")
         const todoContainer = document.createElement('div')
         const title = document.createElement('h2')
         const description = document.createElement('ul')
@@ -60,7 +59,7 @@ function listTodos(todosArr) {
         // DELETE BUTTON FUNCTION    
         deleted.addEventListener("click", (e) => {
             e.preventDefault();
-            console.log(`https://api.vschool.io/nicole/todo/${todosArr[i]._id}`)
+            // console.log(`https://api.vschool.io/nicole/todo/${todosArr[i]._id}`)
             axios.delete(`https://api.vschool.io/nicole/todo/${todosArr[i]._id}`).then(response => {
                 alert(`Your todo was successfully deleted!`)
                 getData()
