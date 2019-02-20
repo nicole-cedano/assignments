@@ -14,12 +14,12 @@ body{
 }
 
 header{
-    display: flex;
+    display: flex;Í
     flex-direction: row;
     justify-content: space-around;
     border-bottom: solid 2pt hotpink;
     margin: 5pt;
-    
+
 
 
 
@@ -41,7 +41,7 @@ header{
 /* add styling to each todo a creature makes */
 .todo-container{
     /* border: solid .5pt hotpink; */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 200pt;
     height: 200pt;
     display: flex;
