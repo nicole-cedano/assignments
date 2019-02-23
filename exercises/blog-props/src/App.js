@@ -1,15 +1,13 @@
 import React from 'react'
 import Header from './Components/Header.js'
 import Bloglist from './Components/Bloglist.js'
-import Footer from './Components/Footer.js'
-
-
+import './styles.css'
 const App = () => {
-
-
-
-
-
+    return (
+        <div> 
+            <Header  />
+        </div>
+    )
 
 
 

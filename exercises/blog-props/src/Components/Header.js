@@ -3,8 +3,9 @@ import Navbar from './Navbar.js'
 
 const Header = () => {
     return(
-        <div className="header-container" style = {{background: url (https://images.unsplash.com/photo-1488998427799-e3362cec87c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)}}>
-
+        <div className="header-container">
+        <h1>Clean Blog</h1>
+        <h3>A Blog Theme by Start Bootstrap</h3>
 
         </div>
     )
