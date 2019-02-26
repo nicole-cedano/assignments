@@ -18,6 +18,7 @@ class App extends React.Component {
         }
 
     }
+    //My methods for the dj app
     handleClear = () => {
         this.setState({
             color1: 'violet',
@@ -66,12 +67,12 @@ class App extends React.Component {
 
         })
     }
-    
+
 
 
     render() {
 
-
+// adding props to the displays as well as adding a tiny bit of styling to the main div
         return (
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                 <div>
