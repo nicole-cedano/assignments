@@ -2,11 +2,12 @@ import React from 'react'
 
 
 const NameForm = (props) => {
+
     return (
-        <form onSubmit={props.onSubmit}>
+        <form style ={{display: "flex", justifyContent: 'center'}}onSubmit={props.onSubmit}>
             Name: <input
-                type= 'text'
-                name= 'nameInput'
+                type='text'
+                name='nameInput'
                 value={props.value}
                 onChange={props.onChange}
                 placeholder='Name' />
