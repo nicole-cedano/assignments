@@ -52,8 +52,16 @@ class App extends React.Component {
 
 
     render() {
+        // styling for the page 
+        const mainStyle = {
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center'
+
+        }
         return (
-            <div>
+            <div style={mainStyle}>
                 <InputForm
                     handleSubmit={this.handleSubmit}
                     handleChange={this.handleChange}
