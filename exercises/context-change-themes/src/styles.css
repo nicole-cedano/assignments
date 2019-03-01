@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+/* styling for whole page  */
+.main {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+
+}
+/* styling for the light theme  */
+.home-light {
+    background-color: lightgoldenrodyellow;
+}
+
+.home-light p:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: goldenrod;
+    border-radius: 25pt;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    height: 30pt;
+    margin: 10pt;
+    padding: 10pt;
+
+
+}
+
+.home-light p:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: ;
+    border-radius: 25pt;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    height: 30pt;
+    margin: 10pt;
+    padding: 10pt;
+
+}
+
+/* styling for dark  */
+
+.home-dark {
+    background-color:rgb(32, 32, 32);
+}
+
+.home-dark p:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: purple;
+    border-radius: 25pt;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    height: 30pt;
+    margin: 10pt;
+    padding: 10pt;
+
+}
+
+.home-dark p:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: gray;
+    border-radius: 25pt;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    height: 30pt;
+    margin: 10pt;
+    padding: 10pt;
+
+}
