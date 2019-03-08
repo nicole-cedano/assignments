@@ -4,7 +4,7 @@ import NavBar from './components/NavBar'
 import Home from './components/Home.js'
 import KuaNumber from './components/KuaNumber.js'
 import Compatibility from './components/Compatibility.js'
-import ChineseSign from './components/ChineseSign.js'
+import Doggies from './components/Doggies.js'
 import MercuryRetrograde from './components/MercuryRetrograde.js'
 import Toggle from './shared/Toggle.js'
 const App = () => {
@@ -21,7 +21,7 @@ const App = () => {
             <Route exact path='/' component={Home} />
             <Route path='/KUA' component={KuaNumber} />
             <Route path='/Compatibility' component={Compatibility} />            
-            <Route path='/ChineseSign' component={ChineseSign} />          
+            <Route path='/Doggies' component={Doggies} />          
             <Route exact path='/IsMercuryInRetrograde' component={MercuryRetrograde} />
             </Switch>
         </div>

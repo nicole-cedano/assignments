@@ -9,7 +9,7 @@ const NavBar = props => {
             <Link to='/KUA'>Kua Number</Link>
             <Link to='/Compatibility'>Compatibility</Link>
             <Link to='/IsMercuryInRetrograde'>Mercury Retrograde</Link>
-            <Link to='/ChineseSign'>Chinese Sign</Link>
+            <Link to='/Doggies'>Doggies</Link>
         </div>
     )
 }

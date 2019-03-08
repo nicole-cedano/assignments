@@ -4,12 +4,12 @@ import React from 'react'
 const DateForm = props => {
     const {handleChange, handleSubmit, inputs: { date}} = props
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="date-form" onSubmit={handleSubmit}>
             <input 
-            type = "number"
+            type = "text"
             onChange = {handleChange}
             value= {date}
-            name="birthdate"
+            name="date"
             placeholder= 'YYYY-MM-DD'
             />
             <button>Submit</button>

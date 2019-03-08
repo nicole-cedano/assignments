@@ -3,19 +3,21 @@ import { Component } from 'react'
 class Form extends Component {
     constructor(props) {
         super(props)
-        this.setState = { inputs: props.inputs}
+        this.state = { inputs: props.inputs}
     }
     handleChange = e => {
-        const {name , value } = e.targer
+        const {name , value } = e.target
         this.setState(prevState => ({
             inputs: {...prevState.inputs, [name]: value}
         }))
     }
+     
     handleSubmit = e => {
         e.preventDefault()
         this.props.submit(this.state.inputs)
-        this.setState({inputs: this.props.inputs })
-
+        this.setState({
+          inputs: this.props.inputs
+        })
     }
     render(){
         return this.props.render({
@@ -25,5 +27,4 @@ class Form extends Component {
         })
     }
 }
-
 export default Form 
