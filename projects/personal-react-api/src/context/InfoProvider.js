@@ -70,8 +70,6 @@ class InfoProvider extends Component {
                     }}>
                     {this.props.children}
                 </InfoContext.Provider>
-
-
             )
         }
     }

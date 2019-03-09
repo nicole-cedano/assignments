@@ -81,7 +81,6 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 300pt;
-    /* background-position: center; */
 }
 .main-home-div > h1{
     top: 0;
@@ -220,18 +219,20 @@
     justify-content: center;
     align-items: center;
 }
-.dog-picture {
-    height: 150pt;
-    width: 150pt;
+.main-dog-div > h1 {
+    padding: 10pt;
+    font-size: 50pt;
+}
+.main-dog-div > h3 {
+    padding: 10pt;
+}
+.dog-pictures {
+    height: 100pt;
+    width: 100pt;
     margin: 5pt;
 }
-@media only screen and (min-width: 300pt) {
-    .dog-grid{
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-
-    }
-    .dog-grid > p {
-        grid-column: 1fr 4fr;
-    }
+.carousel-div {
+    display: flex;
+    margin: 50pt;
 }
+

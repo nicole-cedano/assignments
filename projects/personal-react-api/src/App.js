@@ -19,10 +19,10 @@ const App = () => {
         }/>
             <Switch>
             <Route exact path='/' component={Home} />
-            <Route path='/KUA' component={KuaNumber} />
-            <Route path='/Compatibility' component={Compatibility} />            
-            <Route path='/Doggies' component={Doggies} />          
-            <Route exact path='/IsMercuryInRetrograde' component={MercuryRetrograde} />
+            <Route path='/kua' component={KuaNumber} />
+            <Route path='/compatibility' component={Compatibility} />            
+            <Route path='/doggies' component={Doggies} />          
+            <Route exact path='/ismercuryinretrograde' component={MercuryRetrograde} />
             </Switch>
         </div>
     )
