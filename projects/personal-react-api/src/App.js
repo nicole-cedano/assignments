@@ -2,11 +2,11 @@ import React from 'react'
 import { Switch, Route, withRouter} from 'react-router-dom'
 import NavBar from './components/NavBar'
 import Home from './components/Home.js'
-import KuaNumber from './components/KuaNumber.js'
-import Compatibility from './components/Compatibility.js'
-import Doggies from './components/Doggies.js'
+import ContactMe from './components/ContactMe.js'
+import SpaceDogs from './components/SpaceDogs.js'
 import MercuryRetrograde from './components/MercuryRetrograde.js'
 import Toggle from './shared/Toggle.js'
+import Footer from './components/Footer.js'
 const App = () => {
     return (
         <div>
@@ -19,11 +19,11 @@ const App = () => {
         }/>
             <Switch>
             <Route exact path='/' component={Home} />
-            <Route path='/kua' component={KuaNumber} />
-            <Route path='/compatibility' component={Compatibility} />            
-            <Route path='/doggies' component={Doggies} />          
+            <Route path='/contact' component={ContactMe} />
+            <Route path='/spacedogs' component={SpaceDogs} />          
             <Route exact path='/ismercuryinretrograde' component={MercuryRetrograde} />
             </Switch>
+            <Footer />
         </div>
     )
 }
