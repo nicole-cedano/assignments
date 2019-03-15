@@ -1,17 +1,13 @@
 const express = require('express')
 const app = express()
-
-
+const morgan = require('morgan')
 
 //middleware
 app.use(express.json())
+app.use(morgan('dev'))
 
 // Routes
 app.use("/bounty", require("./routes/bounty.js"))
-
-
-
-
 
 
 
