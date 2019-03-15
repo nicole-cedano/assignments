@@ -34,6 +34,18 @@ class BountyProvider extends Component {
                 bounties: prevState.bounties.filter(bounty => bounty._id !== _id)
             }))
         })
+            .catch(err => console.log(err))
+    }
+
+    editBounty = (_id, updates) => {
+        axios.put(`/bounty/${_id}`, updates).then(response => {
+            const updatedBounty = response.data
+            this.setState(prevState => ({
+
+                bounties: prevState.bounties.map(bounty => bounty._id === _id ? response.data : bounty)
+            }))
+        })
+            .catch(err => console.log(err))
     }
 
 
@@ -46,7 +58,8 @@ class BountyProvider extends Component {
                         bounties: this.state.bounties,
                         getBounties: this.getBounties,
                         addBounty: this.addBounty,
-                        deleteBounty: this.deleteBounty
+                        deleteBounty: this.deleteBounty,
+                        editBounty: this.editBounty
                     }}>
                     {this.props.children}
                 </BountyContext.Provider>

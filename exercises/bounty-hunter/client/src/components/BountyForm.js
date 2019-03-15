@@ -1,7 +1,7 @@
 import React from 'react'
 import {withBounties} from '../context/BountyProvider.js'
 const BountyForm = props => {
-    const {handleChange, handleSubmit, inputs: {firstName, lastName, living, type, bountyAmount }} = props
+    const {handleChange, handleSubmit, btnTxt, toggler, inputs: {firstName, lastName, living, type, bountyAmount }} = props
     console.log(props)
     return (
         <form className= 'bounty-form' onSubmit={handleSubmit}>
@@ -35,7 +35,8 @@ const BountyForm = props => {
         value= {bountyAmount}
         name= "bountyAmount"
         placeholder= "Bounty Amount"/>
-             <button>Add Bounty</button>
+             <button>{btnTxt}</button>
+             <span onClick={toggler}>Close</span>
         </form>
     )
 }
