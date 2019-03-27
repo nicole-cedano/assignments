@@ -35,7 +35,7 @@ const BountyForm = props => {
         value= {bountyAmount}
         name= "bountyAmount"
         placeholder= "Bounty Amount"/>
-             <button>{btnTxt}</button>
+             <button className='btnstyle'>{btnTxt}</button>
              <span onClick={toggler}>Close</span>
         </form>
     )

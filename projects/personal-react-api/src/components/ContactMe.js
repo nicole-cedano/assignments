@@ -11,7 +11,7 @@ class ContactMe extends Component{
             <div className="contact-me-overlay">
             <h1>Contact Me!</h1>
             <p>Nicole Cedano</p>
-            <p>nicole.cedano@icloud.com</p>
+            <p>nicolecedanodev@gmail.com</p>
             </div>
         </div>
     )

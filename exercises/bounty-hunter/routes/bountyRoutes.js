@@ -1,82 +1,63 @@
 const express = require('express')
 const bountyRouter = express.Router()
-const uuid = require('uuid/v4')
-
-// fake database of bounties 
-let bounties = [
-    {
-        firstName: "Nicole",
-        lastName: "Cedano",
-        living: true,
-        bountyAmount: 5,
-        type: "Jedi",
-        _id: uuid()
-    },
-    {
-        firstName: "Darth",
-        lastName: "Bane",
-        living: false,
-        bountyAmount: 1000,
-        type: "Sith",
-        _id: uuid()
-    },
-    {
-        firstName: "Dark",
-        lastName: "Lord",
-        living: false,
-        bountyAmount: 800,
-        type: "Sith",
-        _id: uuid()
-    },
-    {
-        firstName: "Obi-Wan",
-        lastName: "Kenobi",
-        living: true,
-        bountyAmount: 2000,
-        type: "Jedi",
-        _id: uuid()
-    },
-    {
-        firstName: "Luke",
-        lastName: "Skywalker",
-        living: false,
-        bountyAmount: 1500,
-        type: "Jedi",
-        _id: uuid()
-    }
-]
-
+const Bounty = require('../models/bounty.js')
 
 
 bountyRouter.route("/")
-    .get((req, res) => {
-        res.send(bounties)
+    .get((req, res, next) => {
+        Bounty.find((err, bounties) => {
+            if (err) {
+                res.status(500)
+                return next(err)
+            }
+            return res.status(200).send(bounties)
+        })
+
     })
-    .post((req, res) => {
-        const newBounty = req.body
-        newBounty._id = uuid()
-        bounties.push(newBounty)
-        res.send(newBounty)
+    .post((req, res, next) => {
+        const newBounty = new Bounty(req.body)
+        newBounty.save((err, savedBounty) => {
+            if (err) {
+                res.status(500)
+                return next(err)
+            }
+            return res.status(201).send(savedBounty)
+ 
+        })
     })
 
 bountyRouter.route("/:_id")
-    .get((req, res)=> {
-        const foundBounty = bounties.find(bounty => bounty._id === req.params._id)
-        res.send(foundBounty)
+    .get((req, res, next) => {
+        Bounty.findOne({ _id: req.params._id }, (err, bounty) => {
+            if (err) {
+                res.status(500)
+                return next(err)
+            }
+            return res.status(200).send(bounty)
+        })
     })
-    .put((req, res)=> {
-        const foundBounty = bounties.find(bounty => bounty._id === req.params._id)
-        Object.assign(foundBounty, req.body)
-        res.send(foundBounty)
+    .put((req, res, next) => {
+        Bounty.findOneAndUpdate(
+            { _id: req.params._id },
+            req.body,
+            { new: true },
+            (err, updatedBounty) => {
+                if (err) {
+                    res.status(500)
+                    return next(err)
+                }
+                return res.status(201).send(updatedBounty)
+            })
     })
-    .delete((req, res) => {
-        const updatedBounty = bounties.filter(bounty => bounty._id !== req.params._id)
-        bounties = updatedBounty
-        res.send("Bounty Successfully Deleted")
+    .delete((req, res, next) => {
+        Bounty.findOneAndRemove({ _id: req.params._id }, (err, deletedBounty) => {
+            if (err) {
+                res.status(500)
+                return next(err)
+            }
+            return res.status(202).send(`Bounty ${deletedBounty.firstName} ${deletedBounty.lastName} removed`)
+        })
     })
-
-
-
 
 
 module.exports = bountyRouter

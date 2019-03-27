@@ -3,7 +3,7 @@ import Bounty from './Bounty.js'
 
 const BountyList = props => {
     return (
-        <div>
+        <div className="bounty-list">
             {props.bounties.map(bounty =>
                 <Bounty
                     key={bounty._id}

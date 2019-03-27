@@ -11,8 +11,7 @@ class Home extends Component {
                 <h1> Welcome, Earthlings!</h1>
                 <div className="home-intro">
                     <p>Hello, World! My name is Nicole Cedano and this is my first React-API project!
-                        Originally, this was supposed to be an Astrology page, but the beauty of an API working in postman then not on your local host is wonderful,
-                        so now this is a buncha space mumbo jumbo/things that I like!
+                        This is a buncha space mumbo jumbo/things that I like!
                         </p>
                 </div>
                 <div className="home-intro">

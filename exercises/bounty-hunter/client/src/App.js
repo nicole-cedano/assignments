@@ -23,7 +23,9 @@ class App extends Component {
 
     render() {
         return (
-            <div>
+            <div className="main-div" style={{background: `url(https://thumbs.gfycat.com/DefenselessMealyAmericanblackvulture-small.gif)`, backgroundSize: "cover"}}>
+                <h1 className="header">Bounty Hunter</h1>
+                <div>
                 <Toggle render={({ isToggled, toggler }) =>
                     <>
                         {!isToggled
@@ -33,17 +35,17 @@ class App extends Component {
                                 submit={inputs => this.props.addBounty(inputs)}
                             />
                             :
-                            <button onClick={toggler}>ADD BOUNTY</button>
+                            <button onClick={toggler}>ADD</button>
                         }
                             </>
                         }/>
-                <>
-
+                </div>
+                <div className="bounty-list">
                     <BountyList
                         bounties={this.props.bounties}
                         inputs={{ firstName: '', lastName: '', living: "", bountyAmount: '', type: '' }}
                     />
-                </>
+                </div>
             </div>
         )
     }

@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: starWarsFont;
+}
+@font-face {
+    font-family: starWarsFont;
+    src: url('./fonts/Starjedi.ttf')
+}
+.main-div{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.header {
+    color: yellow;
+    padding: 5pt;
+
+}
+.bounty-card-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150pt;
+    margin: 10pt;
+    border-radius: 20pt;
+    padding: 10pt;
+    font-size: 10pt;
+    background-color: rgba(255, 255, 255, 0.3);
+
+}
+
+/* form styling */
+.bounty-form{
+    width: 150pt;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10pt;
+
+}
+/* styling for button */
+.btnstyle {
+    padding: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bounty-form {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10pt;
+    border-radius: 20pt;
+}
+

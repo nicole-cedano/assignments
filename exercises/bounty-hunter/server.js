@@ -4,20 +4,27 @@ const morgan = require('morgan')
 const mongoose = require('mongoose')
 
 
-// db connection
-mongoose.connect("mongodb://localhost:27017/bounties", {useNewUrlParser: true}, () => {
-    
-})
 
 
 //middleware
 app.use(express.json())
 app.use(morgan('dev'))
 
+
+// DB connection
+mongoose.connect("mongodb://localhost:27017/bounties", {useNewUrlParser: true}, () => {
+    console.log("Connected to the DB")
+})
+
+
 // Routes
 app.use("/bounty", require("./routes/bountyRoutes.js"))
 
-
+//Global Error Handler
+app.use((err, req, res, next)=> {
+    console.log(err)
+    return res.send({errorMsg: err.message})
+})
 
 
 
