@@ -18,7 +18,7 @@
 }
 .zen-container header:nth-child(1){
     background-color:green;
-    height: 200px;
+    height: 201px;
     display: flex;
     grid-column: 1/4;
     background: url(http://www.csszengarden.com/214/huntington.jpg);
