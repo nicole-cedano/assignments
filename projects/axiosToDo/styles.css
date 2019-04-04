@@ -8,29 +8,29 @@
 }
 /* styling for the body */
 body{
+    display:flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
     background: url(https://images.unsplash.com/photo-1529243526159-303ff337d22b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80);
     background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh
+
 
 }
 
 header{
-    display: flex;Í
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
     border-bottom: solid 2pt hotpink;
     margin: 5pt;
-
-
-
-
-
+    color: whitesmoke;
+    position: fixed;
+    top: 0;
 }
 
-#todo-list-container{
-    display: grid;
-
-
-}
 
 /* hide boolean value */
 .todo-container > h5 {
@@ -41,21 +41,32 @@ header{
 /* add styling to each todo a creature makes */
 .todo-container{
     /* border: solid .5pt hotpink; */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 200pt;
     height: 200pt;
     display: flex;
     flex-direction: column;
-    justify-items: center;
-    justify-content: space-around;
-    margin: 5pt;
+    justify-content: center;
+    align-items: center;
+    margin: 60pt;
+    margin-bottom: 10pt;
+    padding: 2pt;
+    text-align: center;
+    color:whitesmoke;
 
+}
+.todo-container > ul {
+    padding-left: 0;
+}
+.todo-container > h2 {
 
 }
 button{
     border: solid 1pt black;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    
+    width: 60pt;
+    height: 20pt;
+    margin: 5pt;
 }
 
 /* style each picture to be same size */
@@ -69,13 +80,14 @@ button{
 form {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    justify-items: center;
-    width: 200pt;
-    height: 200pt;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 250pt;
+    height: 300pt;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 5pt;
-    margin: 5pt;
+    margin: 60pt;
+    color: whitesmoke;
 }
 
 @media(min-width: 700px){
@@ -83,18 +95,14 @@ form {
         flex-direction: column;
         flex-wrap: wrap;
     }
-    #to-do-list-container{
-        display: flex;
-        flex-direction: row;
-        
-    }
-    button{
-        height: 50pt;
-        width: 50pt;
 
+    button{
+        height: 20pt;
+        width: 50pt;
     }
     form{
-        height: 500pt;
-        width: 500pt;
+        height: 400pt;
+        width: 400pt;
+        justify-content: space-evenly;
     }
 }

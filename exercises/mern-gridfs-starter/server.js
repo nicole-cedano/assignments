@@ -11,8 +11,8 @@ const gfs = require('multer-gridfs-storage')
 app.use(express.json())
 app.use(morgan('dev'))
 
-let connection
-let storage
+// let connection
+// let storage
 //conection to my db
 mongoose.connect(config.db, { useNewUrlParser: true }, (res) => {
     console.log("[+] Connected to the DB ")
@@ -28,11 +28,10 @@ mongoose.connect(config.db, { useNewUrlParser: true }, (res) => {
     })
 })
 
-
 // async function connectToDb(){
 //     let connection
 //     try{
-//         connection = await mongoose.connect(config.db, { useNewUrlParser: true })
+//         connection = await mongoose.connect("mongodb://localhost:27017/grid-fs", { useNewUrlParser: true })
 //     }
 //     catch(err){
 //         console.log(err)
@@ -40,7 +39,8 @@ mongoose.connect(config.db, { useNewUrlParser: true }, (res) => {
 //     console.log("[+] Connected to the DB ")
 //     // console.log(connection)
 //     connection = require('mongoose').connection
-//     const storage = new gfs({
+//     console.log(connection.db)
+//     let storage = new gfs({
 //         db: connection.db,
 //         file: (req, file) => {
 //             return {
@@ -48,10 +48,13 @@ mongoose.connect(config.db, { useNewUrlParser: true }, (res) => {
 //             }
 //         }
 //     })
-   
+//     console.log(storage)
 //     return storage
-// }
 
+//}
+
+// const storage = connectToDb()
+// module.exports = connectToDb()
 
 
 
