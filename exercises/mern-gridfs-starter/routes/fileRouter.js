@@ -46,16 +46,18 @@ fileRouter.post("/", (req,res, next) =>{
     })
 })
 
-fileRouter.get("/images/:_id", (req, res,next)=>{
-    Image.find(image, (err, doc)=>{
+
+fileRouter.get("/", (req, res,next)=>{
+    // console.log(Image)
+    Image.find((err, images)=>{
         if(err){
             res.status(500)
             return next(err)
         }
-        let base64 = (doc[0].img.data.toString('base64'))
-        console.log(base64)
-        res.contentType(doc.img.contentType)
-        return res.send(base64)
+        // let base64 = (images[0].img.path.toString('base64'))
+        // console.log(images[0].img.path.toString('base64'))
+        // res.contentType(doc.img.contentType)
+        return res.send(images[0].img.path.toString('base64'))
     })
 })
 

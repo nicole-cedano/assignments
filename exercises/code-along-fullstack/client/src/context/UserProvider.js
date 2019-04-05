@@ -1,34 +1,46 @@
 import React, { Component } from "react"
 import axios from 'axios'
+import { withRouter } from 'react-router-dom'
+
 const UserContext = React.createContext()
+
 
 class UserProvider extends Component {
     constructor() {
         super()
         this.state = {
             user: JSON.parse(localStorage.getItem("user")) || {},
-            token: localStorage.token ||  ""
+            token: localStorage.token || "",
+            errMsg: ""
         }
     }
     signup = credentials => {
         axios.post("/auth/signup", credentials).then(res => {
-            const {user, token} = res.data
+            const { user, token } = res.data
             localStorage.setItem("user", JSON.stringify(user))
             localStorage.setItem("token", token)
-            this.setState({user, token})
+            this.setState({ user, token, errMsg: "" })
         })
-        .catch(err => console.log(err))
+            .catch(err => this.handleErr(err.response.data.errMsg))
     }
     login = credentials => {
         axios.post("/auth/login", credentials).then(res => {
-            const {user, token} = res.data
+            const { user, token } = res.data
             localStorage.setItem("user", JSON.stringify(user))
             localStorage.setItem("token", token)
-            this.setState({user, token})
+            this.setState({ user, token, errMsg:"" })
         })
-        .catch(err => console.log(err))
+            .catch(err => this.handleErr(err.response.data.errMsg))
     }
 
+    logout = () => {
+        localStorage.removeItem("token")
+        localStorage.removeItem("user")
+        this.setState({user: {}, token: ""})
+    }
+
+    //error handler for internal purposes regarding this provider
+    handleErr = errMsg => this.setState({ errMsg })
 
     render() {
         return (
@@ -36,7 +48,8 @@ class UserProvider extends Component {
                 value={{
                     ...this.state,
                     signup: this.signup,
-                    login: this.login
+                    login: this.login,
+                    logout: this.logout
                 }}>
                 {this.props.children}
 
@@ -45,7 +58,7 @@ class UserProvider extends Component {
     }
 }
 
-export default UserProvider
+export default withRouter(UserProvider)
 
 
 export const withUser = C => props => (
