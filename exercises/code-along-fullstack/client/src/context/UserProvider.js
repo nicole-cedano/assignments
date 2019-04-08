@@ -31,7 +31,7 @@ class UserProvider extends Component {
             this.setState({ user, token, errMsg:"" })
         })
             .catch(err => this.handleErr(err.response.data.errMsg))
-    }
+    } 
 
     logout = () => {
         localStorage.removeItem("token")

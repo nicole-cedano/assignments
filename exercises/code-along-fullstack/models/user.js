@@ -46,7 +46,6 @@ userSchema.pre("save", function(next){
         next()
     })
 })
-
 //Checkpassword method
 userSchema.methods.checkPassword = function(passwordAttempt, callback){
     bcrypt.compare(passwordAttempt, this.password, (err, isMatch) => {

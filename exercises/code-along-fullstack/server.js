@@ -22,7 +22,6 @@ app.use("/auth", require("./routes/authRouter.js"))
 app.use("/public", require("./routes/publicRouter.js"))
 app.use("/api/posts", require("./routes/postRouter.js"))
 
-
 //Global Error Handler
 app.use((err, req, res, next) => {
     console.error(err)

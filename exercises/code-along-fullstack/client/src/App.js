@@ -30,7 +30,7 @@ const App = (props) => {
                     component={Home}
                     username={user.username}
                     logout={logout} />
-                <Route path="*" component={NotFound} />
+                <Route path="*" component={NotFound} />t
 
             </Switch>
         </div>
