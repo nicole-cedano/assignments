@@ -20,6 +20,7 @@ class SpaceDogs extends Component {
             slidesToScroll: 1
           };
         const mappedDoggies = this.props.doggies.map((image, i) => {
+            console.log(image)
             return (
                     <div key={i}>
                         <img className='carousel-div' src={image} />

@@ -1,0 +1,149 @@
+*{
+margin: 0;
+box-sizing: border-box;
+}
+/* setting my color scheme  */
+:root {
+    --lightest-purple: #F0D3F7;
+    --bright-purple: #9D79BC;
+    --subtle-purple: #8D6A9F;
+    --pomp-pink: #8D5A97;
+    --chinese-purple: #7F557D;
+}
+/* setting overall styling for the page */
+.page-wrapper {
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+    padding: 20px;
+    padding-top: 0;
+    background-color: var(--lightest-purple);
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* styling my logo  */
+.logo {
+    color: var(--chinese-purple);
+    width: 25%;
+    font-weight: 700;
+    padding-top: 20px;
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+/* styling for the nav */
+.nav{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    
+    background-color: rgba(0,0,0, .8);
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top:0;
+    z-index: 4;
+    transition: left 300ms linear;
+}
+
+.nav-open {
+    left: 0
+}
+
+.nav-closed {
+    left: -100vw;
+
+}
+
+.nav a {
+   width: 100%;
+   text-align: center;
+   padding: 10pt 0;
+   margin: 10pt;
+   transition: background-color 100ms linear;
+   font-size: 15pt; 
+   text-decoration: none;
+   color: var(--lightest-purple);
+}
+
+.nav a:visited {
+    color: var(--pomp-pink)
+}
+
+.nav a:hover {
+    background-color: #5559;
+
+}
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0, .5);
+    position: absolute;
+    transition: left 300ms linear;
+    z-index: 2;
+
+}
+
+.overlay-open {
+    left: 0;
+}
+
+.overlay-closed {
+    left: -100vw;
+}
+
+.rotate {
+    z-index: 1;
+    transform: rotate(90deg);
+    transition: transform 200ms linear, opacity 300ms linear;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 5px;
+    color: var(--pomp-pink)
+}
+
+.rotate-open {
+    transform: rotate(90deg)
+}
+
+.rotate-closed {
+    transform: rotate(0deg)
+}
+
+/* styling for home page */
+.intro {
+    color: var(--chinese-purple);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* styling for resume page */
+.resbutton{
+    padding: 5px;
+    color: var(--pomp-pink);
+    box-shadow: 0px 0px 6px rgba(255,255,255,0.7);
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.resume {
+    width: 300px;
+    height: 450px;
+    background-color: rgba(0,0,0, .5);
+    position: absolute;
+    transition: left 300ms linear;
+    z-index: 2;
+    transition: left 300ms linear
+}
+.resume-open{
+    left: 10px;
+
+}
+
+.resume-closed {
+    left: -300px;
+}
