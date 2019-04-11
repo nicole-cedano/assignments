@@ -24,7 +24,7 @@ class MercuryRetrograde extends Component {
                         <h5>Enter a Date in the requested format to find out if Mercury is in Retrograde: </h5>
                         <Form
                             render={props => <DateForm {...props} />}
-                            inputs={{ date: '' }}
+                            inputs={{ date: '',}}
                             submit={inputs => this.props.getRetrograde(inputs)}
                         />
                         <h3>{this.props.isRetrograde}</h3>
