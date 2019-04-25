@@ -1,16 +1,34 @@
-import React from 'react'
-import { useToggle } from '../shared/hooks'
-import resume from "./NicoleCedanoResume.png"
+import React, { Component } from 'react'
+import { Document, Page } from 'react-pdf'
+import resume from "./NCresume.pdf"
+import { pdfjs } from 'react-pdf';
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-
-const Resume = () => {
-    const { toggler, toggle } = useToggle(true)
-    return (
-        <div>
-            <button onClick={toggler} className={`resbutton resbutton-${!toggle ? "open" : "closed"}`}>View My Resume</button>
-            <img src={resume} onClick={toggler} className={`resume resume-${!toggle ? "open" : "closed"}`} />
-        </div>
-    )
+class Resume extends Component {
+    constructor() {
+        super()
+        this.state = {
+            numPages: null,
+            pageNumber: 1,
+        }
+    }
+    // loading pdf
+    onDocumentLoadSuccess = ({ numPages }) => {
+        this.setState({ numPages })
+    }
+    render() {
+        const { pageNumber} = this.state;
+        return (
+            <div className='resume'>
+                <Document
+                    className="pdfdoc"
+                    file={resume}
+                    onLoadSuccess={this.onDocumentLoadSuccess}>
+                    <Page  className= "page" scale="1.75" pageNumber={pageNumber} />
+                </Document>
+            </div>
+        )
+    }
 }
 
 export default Resume

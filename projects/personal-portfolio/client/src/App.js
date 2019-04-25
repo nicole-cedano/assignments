@@ -12,8 +12,8 @@ import Resume from "./components/Resume.js"
 const App = () => {
     return (
         <div className="page-wrapper">
-            <NavBar />
             <Logo />
+            <NavBar />
             <Switch>
                 <Route exact path="/" render={rProps => <Home {...rProps} />} />
                 <Route path="/contact" render={rProps => <Contact {...rProps} />} />

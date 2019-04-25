@@ -5,11 +5,21 @@ const NavBar = () => {
     const { toggle, toggler } = useToggle(true)
     return (
         <div>
+        {/* making two nav bars */}
+        {/* toggle */}
+        <div className="toggle-nav">
         <div onClick={toggler} className={`overlay overlay-${!toggle ? "open" : "closed"}`}></div>
         <button onClick={toggler} className={`rotate rotate-${!toggle ? "open" : "closed"}`}>|||</button>
-
         <div onClick={toggler} className={`nav nav-${!toggle ? "open" : "closed"}`}>
             <Link to="/">Home</Link>
+            <Link to="/projects">Projects</Link>
+            <Link to="/resume">Resume</Link>
+            <Link to="/contact">Contact</Link>
+        </div>
+        </div>
+        {/* normal */}
+        <div className= "normal-nav">
+        <Link to="/">Home</Link>
             <Link to="/projects">Projects</Link>
             <Link to="/resume">Resume</Link>
             <Link to="/contact">Contact</Link>
