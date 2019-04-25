@@ -49,7 +49,7 @@ class InfoProvider extends Component {
     }
 
     getDoggies = () => {
-        axios.get("https://dog.ceo/api/breeds/image/random/10").then(response => {
+        axios.get("https://dog.ceo/api/breeds/image/random/12").then(response => {
             const { message } = response.data
             this.setState ({
                 doggies: message

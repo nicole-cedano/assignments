@@ -16,7 +16,7 @@ class Home extends Component {
                 </div>
                 <div className="home-intro">
                     <p>
-                    The Mercury Retrograde page is powered by https://mercuryretrogradeapi.com. You are able to calculate if any day you request falls on retrograde. The Doggies page is powered by https://dog.ceo/dog-api/documentation/random, it returns 10 random pictures of dogs back!  </p>
+                    The Mercury Retrograde page is powered by https://mercuryretrogradeapi.com. You are able to calculate if any day you request falls on retrograde. The Doggies page is powered by https://dog.ceo/dog-api/documentation/random, it returns random pictures of dogs back!  </p>
                 </div>
                 <div className="home-intro">
                     <p>
