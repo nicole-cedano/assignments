@@ -4,6 +4,7 @@ import resume from "./NCresume.pdf"
 import { pdfjs } from 'react-pdf';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
+
 class Resume extends Component {
     constructor() {
         super()
@@ -21,6 +22,9 @@ class Resume extends Component {
         return (
             <div className='resume'>
                 <Document
+                options={{
+                cMapUrl: 'cmaps/',
+                cMapPacked: true}}
                     className="pdfdoc"
                     file={resume}
                     onLoadSuccess={this.onDocumentLoadSuccess}>
