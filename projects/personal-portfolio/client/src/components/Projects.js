@@ -9,36 +9,44 @@ const Projects = () => {
     return (
 
         <div className="projects">
-            <div className="gradient">
-                <span className="project-card" style={{ background: `url(${Juan})`, backgroundSize: "cover", backgroundAttachment: "scroll", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
+            <span className="project-card" style={{ background: `url(${Juan})`, backgroundSize: "cover", backgroundAttachment: "scroll", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
+                <div className="project-overlay">
                     Juan's Photography
                 <a href="https://github.com/nicole-cedano/juan-photography">View Git</a>
-                </span>
-            </div>
-            <div className="gradient">
-                <span className="project-card" style={{ background: `url(${Park})`, backgroundSize: "cover", backgroundAttachment: "scroll", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
+                </div>
+            </span>
+
+            <span className="project-card" style={{ background: `url(${Park})`, backgroundSize: "cover", backgroundAttachment: "scroll", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
+                <div className="project-overlay">
                     Parking U
-                    <a href="gradient">View App</a>
-                </span>
-            </div>
-            <div className="gradient">
-                <span className="project-card" style={{ background: `url(${api})`, backgroundSize: "cover", backgroundAttachment: "scroll", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
+                <a href="gradient">View App</a>
+                <a href="https://github.com/nicole-cedano/vschool-group-proj">View Git</a>
+                </div>
+            </span>
+
+            <span className="project-card" style={{ background: `url(${api})`, backgroundSize: "cover", backgroundAttachment: "scroll", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
+                <div className="project-overlay">
                     Space Mumbo Jumbo
                 <a href="http://spacemumbojumbo.surge.sh/">View App</a>
-                </span>
-            </div>
-            <div className="gradient">
-                <span className="project-card" style={{ background: `url(${Todo})`, backgroundSize: "cover", backgroundAttachment: "scroll", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
+                <a href="https://github.com/nicole-cedano/assignments/tree/master/projects/personal-react-api">View Git</a>
+                </div>
+            </span>
+
+            <span className="project-card" style={{ background: `url(${Todo})`, backgroundSize: "cover", backgroundAttachment: "scroll", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
+                <div className="project-overlay">
                     Todo List
-                <a href="http://todoaxiosnc.surge.sh/">View App</a>     
-                </span>
-            </div>
-            <div className="gradient">
-                <span className="project-card" style={{ background: `url(${Zen})`, backgroundSize: "cover", backgroundAttachment: "scroll", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
+                <a href="http://todoaxiosnc.surge.sh/">View App</a>
+                <a href="https://github.com/nicole-cedano/assignments/tree/master/projects/axiosToDo">View Git</a>
+                </div>
+            </span>
+
+            <span className="project-card" style={{ background: `url(${Zen})`, backgroundSize: "cover", backgroundAttachment: "scroll", backgroundPosition: "center", backgroundRepeat: "no-repeat" }}>
+                <div className="project-overlay">
                     Css Zen Garden
                 <a href="http://csszengardennc.surge.sh/">View App</a>
-                </span>
-            </div>
+                <a href="https://github.com/nicole-cedano/assignments/tree/master/projects/cssZenGarden">View Git</a>
+                </div>
+            </span>
         </div>
     )
 }
