@@ -268,15 +268,15 @@ box-sizing: border-box;
 
 /* footer style 
  */
-.footer{
-    position: absolute;
+/* .footer{
+    position: relative;
     bottom: 0;
     right: 0;
     padding-right: 10px;
     text-transform: uppercase;
     color: var(--ube);
     font-weight: 600;
-}
+} */
 
 
 

@@ -6,7 +6,7 @@ import Home from './components/Home.js'
 import Contact from './components/Contact.js'
 import Projects from './components/Projects.js'
 import Resume from "./components/Resume.js"
-import Footer from './components/Footer'
+
 
 
 
@@ -21,7 +21,7 @@ const App = () => {
                 <Route path="/projects" render={rProps => <Projects {...rProps} />} />
                 <Route path ="/resume" render={rProps => <Resume {...rProps}/>}/>
             </Switch>
-            <Footer />
+           
         </div>
     )
 }
