@@ -1,11 +1,12 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
+import {withRouter} from 'react-router-dom'
 
 
-const Logo = () => {
+const Logo = (props) => {
     return (
-        <h1 onClick={() => <Redirect to="/"/>} className={"logo"}>Nicole Cedano</h1>
+        <h1 onClick={() => props.history.push("/")} className={"logo"}>Nicole Cedano</h1>
     )
 }
 
-export default Logo
+export default withRouter(Logo)
