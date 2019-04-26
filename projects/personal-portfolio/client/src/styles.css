@@ -264,11 +264,9 @@ box-sizing: border-box;
         font-weight: 600;
         color: var(--ube)
      }
-     .projects{
+    .projects{
          flex-direction: row;
          flex-wrap: wrap;
-         position: relative;
-         left: 55px;
      }
     .resume-backup{
     position: relative;
