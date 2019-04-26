@@ -132,6 +132,7 @@ box-sizing: border-box;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
 }
 .intro {
     color: var(--darkest-purple);

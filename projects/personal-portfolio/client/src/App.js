@@ -20,8 +20,7 @@ const App = () => {
                 <Route path="/contact" render={rProps => <Contact {...rProps} />} />
                 <Route path="/projects" render={rProps => <Projects {...rProps} />} />
                 <Route path ="/resume" render={rProps => <Resume {...rProps}/>}/>
-            </Switch>
-           
+            </Switch>        
         </div>
     )
 }
