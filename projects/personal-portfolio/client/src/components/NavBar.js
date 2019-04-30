@@ -4,7 +4,7 @@ import { useToggle } from "../shared/hooks"
 const NavBar = () => {
     const { toggle, toggler } = useToggle(true)
     return (
-        <div>
+        <div className="navbar">
         {/* making two nav bars */}
         {/* toggle */}
         <div className="toggle-nav">

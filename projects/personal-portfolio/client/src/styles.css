@@ -159,6 +159,18 @@ box-sizing: border-box;
     align-items: center;
     margin-top: 50px;
 }
+.resume-download{
+    text-decoration: none;
+    color: var(--ube);
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: var(--baby-white);
+    box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.7)
+}
 .page{
     object-fit: cover;
 }
@@ -283,6 +295,17 @@ box-sizing: border-box;
 
  /* media query  */
 @media only screen and (min-width: 768px){
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+    .resume{
+        grid-column: 2/4;
+    }
+    .projects{
+        grid-column: 2/4;
+    }
     .toggle-nav{
         visibility: hidden;
     }
@@ -293,7 +316,7 @@ box-sizing: border-box;
         flex-direction: column;
         justify-content: space-evenly;
         text-align: left;
-        position: fixed;
+        /* grid-column: 1fr 2fr; */
         width: 100px;
     }
     .normal-nav a {
@@ -310,17 +333,17 @@ box-sizing: border-box;
         font-weight: 600;
         color: var(--ube)
      }
+     .navbar{
+        grid-column: 1/2;
+     }
+     .contact{
+         grid-column: 2/4;
+     }
+     /* .home-wrap{
+         grid-column: 2/4;
+     } */
     .projects{
          flex-direction: row;
          flex-wrap: wrap;
-         width: 75%;
-         left: 250px;
-         margin-top: 50px;
-         position: relative;
      }
-    .resume-backup{
-    position: relative;
-    left: 50px;
-    max-width: 80%;
-    }
 }

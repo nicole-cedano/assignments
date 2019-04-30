@@ -14,13 +14,15 @@ const App = () => {
     return (
         <div className="page-wrapper">
             <Logo />
-            <NavBar />
-            <Switch>
-                <Route exact path="/" render={rProps => <Home {...rProps} />} />
-                <Route path="/contact" render={rProps => <Contact {...rProps} />} />
-                <Route path="/projects" render={rProps => <Projects {...rProps} />} />
-                <Route path ="/resume" render={rProps => <Resume {...rProps}/>}/>
-            </Switch>        
+            <div className="grid" >
+                <NavBar />
+                <Switch>
+                    <Route exact path="/" render={rProps => <Home {...rProps} />} />
+                    <Route path="/contact" render={rProps => <Contact {...rProps} />} />
+                    <Route path="/projects" render={rProps => <Projects {...rProps} />} />
+                    <Route path="/resume" render={rProps => <Resume {...rProps} />} />
+                </Switch>
+            </div>
         </div>
     )
 }
