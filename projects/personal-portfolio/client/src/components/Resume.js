@@ -43,7 +43,7 @@ const Resume = () => {
     return (
         <div className="resume">
         <img  className="resume-backup" src={backup} />
-        <a className="resume-download" href="https://drive.google.com/open?id=1UiPB1dTxUyyDrPd8aGq_sB87FCmYzCMU" target="_blank" rel="noopener noreferrer">DOWNLOAD RESUME</a>
+        <a className="resume-download" href="https://drive.google.com/open?id=1sCo80DHcDSpGKia5-IENZnqZrqMr3SPa" target="_blank" rel="noopener noreferrer">DOWNLOAD RESUME</a>
         </div>
     )
 }
